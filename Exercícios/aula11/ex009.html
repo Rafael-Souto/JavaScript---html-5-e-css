@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade!</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <h2>Digite o país em que você nasceu.</h2>
+    <input type="text" name="txtnas" id="txtnas">
+    <input type="button"  value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar () {
+            var txtn = document.querySelector('input#txtnas')
+            var res = document.querySelector('div#res')
+            var nas = (txtn.value)
+            res.innerHTML = `<p>O país em que você nasceu foi <strong>${nas}</strong></p>`
+            if (nas == 'Brasil') {
+                res.innerHTML = `<p>Você é <strong>Brasileiro</strong></p>`  
+            } else {
+                res.innerHTML = `<p>Você é <strong>estrangeiro!</strong></p>`
+            }    
+        }
+    </script>
+</body>
+</html>
